@@ -34,8 +34,14 @@ private Joystick leftStick, rightStick;
 
     public void operatorControl() 
     {
-    	updateLeft(leftStick.getAxis(AxisType.kY));
-    	updateRight(rightStick.getAxis(AxisType.kY));
+	while(true){
+	    	updateLeft(leftStick.getAxis(AxisType.kY));
+	    	updateRight(rightStick.getAxis(AxisType.kY));
+		try{
+			Thread.sleep(5);
+		}
+		catch(Exception e){}
+	}
     }
 
     public void test() 
